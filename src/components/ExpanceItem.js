@@ -1,12 +1,19 @@
 import './ExpanceItem.css';
 
 function ExpanceItem() {
+   
+
+
+    const expanceDate = new Date(2022, 12, 18); 
+    const expanceTitle = 'iPhone 13 pro';
+    const expancePrice = '$600.00';
+    // console.log(expanceDate);
     return (
        <div className="expense-item">
-        <div>December 18th 2022</div>
+        <div>{expanceDate.toISOString()}</div>
         <div className="expense-item__description">
-            <h2>iPhone 13 pro</h2>
-            <div className="expense-item__price">$600.00</div>
+            <h2>{expanceTitle}</h2>
+            <div className="expense-item__price">{expancePrice}</div>
         </div>
        </div>
     );
