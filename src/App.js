@@ -1,7 +1,7 @@
 import React from 'react';
 import Expances from './components/Expances/Expances';
 
-function App() {
+const App = () => {
   return (
     <Expances />
   );

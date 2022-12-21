@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 
 import './ExpanceItem.css';
 
-function ExpanceItem(props) {
+const ExpanceItem = (props) => {
 
     // console.log(props);
     return (
