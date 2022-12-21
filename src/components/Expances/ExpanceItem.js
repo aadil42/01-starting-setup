@@ -1,5 +1,7 @@
+import React from 'react';
+
 import ExpanceDate from './ExpanceDate';
-import Card from './Card';
+import Card from '../UI/Card';
 
 import './ExpanceItem.css';
 

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './ExpanceDate.css';
 
 function ExpanceDate(props) {

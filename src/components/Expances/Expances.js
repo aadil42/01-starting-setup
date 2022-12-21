@@ -1,6 +1,9 @@
+import React from 'react';
+
 import ExpanceItem from './ExpanceItem';
-import Card from './Card';
+import Card from '../UI/Card';
 import './Expances.css';
+
 
 function Expances() {
     const expenses = [
