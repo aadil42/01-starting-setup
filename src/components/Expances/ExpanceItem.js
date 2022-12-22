@@ -8,6 +8,9 @@ import './ExpanceItem.css';
 const ExpanceItem = (props) => {
 
     // console.log(props);
+    const doSomething = () => {
+        alert('did something.');
+    }
     return (
        <Card className="expense-item">
         <ExpanceDate date={props.date} />
@@ -15,6 +18,7 @@ const ExpanceItem = (props) => {
             <h2>{props.title}</h2>
             <div className="expense-item__price">{props.amount}</div>
         </div>
+        <button onClick={doSomething}>Click here</button>
        </Card>
     );
 }
