@@ -1,9 +1,13 @@
 import React from 'react';
-import Expances from './components/Expances/Expances';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   return (
-    <Expances />
+    <div>
+        <NewExpense />
+        <Expenses />
+    </div>
   );
 }
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import ExpanceDate from './ExpanceDate';
+import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 
-import './ExpanceItem.css';
+import './ExpenseItem.css';
 
-const ExpanceItem = (props) => {
+const ExpenseItem = (props) => {
 
     const [title, setTitle] = useState(props.title);
 
@@ -14,8 +14,8 @@ const ExpanceItem = (props) => {
     }
     return (
        <Card className="expense-item">
-        <ExpanceDate date={props.date} />
-        <div className="expense-item__description">
+        <ExpenseDate date={props.date} />
+        <div className="expense-item__description"> 
             <h2>{title}</h2>
             <div className="expense-item__price">{props.amount}</div>
         </div>
@@ -24,4 +24,4 @@ const ExpanceItem = (props) => {
     );
 }
 
-export default ExpanceItem;
+export default ExpenseItem;
