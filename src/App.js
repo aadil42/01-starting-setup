@@ -30,6 +30,12 @@ const initialExpense = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: uuidv4(),
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2019, 5, 12),
+  }
 ];
 
 const App = () => {
@@ -37,17 +43,14 @@ const App = () => {
   // app data.
   const [expenses, setExpenses] = useState(initialExpense);
 
-  const onFilter = (yearData) => {
-    // console.log(yearData);
-    // console.log(expenses => expenses.filter((expense) => { return expense === yearData}));
-    // console.log(expenses[1].date.getFullYear());
-    setExpenses((expenses) => {
-      return expenses.filter((expense) => { 
-        console.log(expense.date.getFullYear(), yearData);
-        return expense.date.getFullYear() == yearData;
-      });
-    });
-  }
+  // const onFilter = (yearData) => {
+  //   setExpenses((expenses) => {
+  //     return expenses.filter((expense) => { 
+  //       console.log(expense.date.getFullYear(), yearData);
+  //       return expense.date.getFullYear() == yearData;
+  //     });
+  //   });
+  // }
 
   const addExpenseHandler = (expenseData) => {
     expenseData.id = uuidv4();
@@ -56,7 +59,7 @@ const App = () => {
   return (
     <div>
         <NewExpense onAddExpense={addExpenseHandler} />
-        <Expenses onFilter={onFilter} expenses={expenses} />
+        <Expenses expenses={expenses} />
     </div>
   );
 }
