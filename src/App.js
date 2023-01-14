@@ -42,16 +42,7 @@ const App = () => {
 
   // app data.
   const [expenses, setExpenses] = useState(initialExpense);
-
-  // const onFilter = (yearData) => {
-  //   setExpenses((expenses) => {
-  //     return expenses.filter((expense) => { 
-  //       console.log(expense.date.getFullYear(), yearData);
-  //       return expense.date.getFullYear() == yearData;
-  //     });
-  //   });
-  // }
-
+  
   const addExpenseHandler = (expenseData) => {
     expenseData.id = uuidv4();
     setExpenses(expenses => [expenseData, ...expenses]);
