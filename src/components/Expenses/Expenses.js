@@ -11,9 +11,8 @@ const Expenses = (props) => {
 
 
       const [year, setYear] = useState(2019);
-
       const selectedYearHandler = (yearData) => {
-        // console.log(year);
+        props.onFilter(yearData);
         setYear(yearData);
       }
       return (

@@ -37,7 +37,17 @@ const App = () => {
   // app data.
   const [expenses, setExpenses] = useState(initialExpense);
 
-
+  const onFilter = (yearData) => {
+    // console.log(yearData);
+    // console.log(expenses => expenses.filter((expense) => { return expense === yearData}));
+    // console.log(expenses[1].date.getFullYear());
+    setExpenses((expenses) => {
+      return expenses.filter((expense) => { 
+        console.log(expense.date.getFullYear(), yearData);
+        return expense.date.getFullYear() == yearData;
+      });
+    });
+  }
 
   const addExpenseHandler = (expenseData) => {
     expenseData.id = uuidv4();
@@ -46,7 +56,7 @@ const App = () => {
   return (
     <div>
         <NewExpense onAddExpense={addExpenseHandler} />
-        <Expenses expenses={expenses} />
+        <Expenses onFilter={onFilter} expenses={expenses} />
     </div>
   );
 }
