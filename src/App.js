@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
-
 // importing unique id package.
 import { v4 as uuidv4 } from 'uuid';
 
