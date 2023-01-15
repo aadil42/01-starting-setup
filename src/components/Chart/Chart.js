@@ -7,14 +7,15 @@ import { v4 as uuidv4 } from 'uuid';
 import './Chart.css';
 
 const Chart = (props) => {    
+
     return(
         <div className="chart">
             {props.dataPoints.map((dataPoint) => {
                 return <ChartBar 
                     key = {uuidv4()}
-                    // value={dataPoint.value}
-                    // maxValue={totalMaximum}
-                    // label={dataPoint.label}
+                    value={dataPoint.value}
+                    maxValue={totalMaximum}
+                    label={dataPoint.label}
                 />;
             })}
         </div>
